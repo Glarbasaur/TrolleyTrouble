@@ -6,6 +6,7 @@ from pydantic import BaseModel
 from fastapi.templating import Jinja2Templates
 from starlette.responses import HTMLResponse
 from starlette.staticfiles import StaticFiles
+import distributed_counters
 
 
 class Item(BaseModel):
@@ -56,6 +57,10 @@ Problem_Text = [
     "A trolley is headed towards a track where 5 people are tied. You can pull a lever to switch the trolley to a track where it will enter a time machine and kill 5 people 100 years in the future.",
     "A trolley is headed towards a track where 5 people are tied. You can pull a lever to switch the trolley to a track where it will enter a tunnel and emerge in a distant country where 5 people are tied.",
 ]
+
+for i in range (28):
+    'Watch'+i = distributed_counters.Shard.__init__()
+    Lever = distributed_counters.Shard.__init__()
 
 
 def nextpage(k):
