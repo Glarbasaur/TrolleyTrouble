@@ -80,7 +80,7 @@ async def read_form():
 def I_Have_No_Idea_What_Im_Doing(request: Request, item_id: int):
     response = templates.TemplateResponse('TrolleyTrouble.html', context={
         'request': request, 'ProblemTitle': Problem_Title[item_id], 'ImageURL': Image_URL[item_id],
-        'ProblemText': Problem_Text[item_id], 'PageNumber': item_id, 'StaticLocation': '/static/styles.css'})
+        'ProblemText': Problem_Text[item_id], 'PageNumber': item_id, 'StaticLocation': '/static/styles.css',})
     return response
 
 
