@@ -39,7 +39,7 @@ Problem_Text = [
     "A trolley is headed towards 5 people tied to the track. You can pull a lever to switch the trolley to a track where someone has left a box of newly discovered original scrolls of the early abrahamic religions",
     "A trolley is headed towards 1 poor janitor tied to the track. You can pull a lever to switch the trolley to a track where 1 wealthy stock-broker is tied.",
     "A trolley is headed towards 1 shelf restocker tied to the track. You can pull a lever to switch the trolley to a track where 1 acclaimed astrophysicist is tied."
-    "A trolley is headed towards 5 convicted and released murderers. You can pull a lever to switch the trolley to a track where 1 person is tied who has never seriously hurt anyone in their life.",
+    "A trolley is headed towards 5 convicted and released murderers tied to the track. You can pull a lever to switch the trolley to a track where 1 person is tied who has never seriously hurt anyone in their life.",
     "A trolley is headed towards a track where 5 elderly people have been tied. You can pull a lever to switch the trolley to a track where 1 baby has been tied.",
     "A trolley is headed towards a track where 5 sentient robots, capable of feeling pain, have been tied. You can pull a lever to switch the trolley to a track where 1 human has been tied.",
     "A trolley is headed towards a track where 1 well liked, kind person is tied. You can pull a lever to switch the trolley to a track where 1 disliked, rude person is tied.",
@@ -57,10 +57,13 @@ Problem_Text = [
     "A trolley is headed towards a track where 5 people are tied. You can pull a lever to switch the trolley to a track where it will enter a time machine and kill 5 people 100 years in the future.",
     "A trolley is headed towards a track where 5 people are tied. You can pull a lever to switch the trolley to a track where it will enter a tunnel and emerge in a distant country where 5 people are tied.",
 ]
-
+polls = {}
 for i in range (28):
-    'Watch'+i = distributed_counters.Shard.__init__()
-    Lever = distributed_counters.Shard.__init__()
+    num=str(i)
+    polls[f"Watch{num}"] = distributed_counters.Counter(5)
+    polls[f"Lever{num}"] = distributed_counters.Counter(5)
+
+
 
 
 def nextpage(k):
